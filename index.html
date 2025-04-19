@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe Mutante Jiu-Jitsu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Equipe Mutante Jiu-Jitsu</h1>
+
+        <button id="homeButton" onclick="handleButtonClick('index.html', 'homeButton')">A Equipe</button>
+        <button onclick="location.href='galeria.html'">Galeria</button>
+        <button onclick="location.href='contato.html'">Contato</button>
+        <button onclick="location.href='loja.html'">Loja</button>
+    </header>
+
+    <div id="doodle" style="display: none;">
+        <div class="doodle-popup">
+            <img src="assets/icones/01.png" alt="Matheus Noima"> <!-- Produtor cultural do Rap de Segunda no Parque Muísa -->
+            <p>OSS!!</p> <!-- OSS!! -->
+        </div>
+    </div>
+
+    <main>
+        <h1>Escola de Jiu-Jitsu e Defesa Pessoal</h1>
+        <p>A Equipe <strong>Mutante Jiu-Jitsu</strong> é uma comunidade onde disciplina, respeito e excelência se encontram!</p>
+        <p>Fundada em <strong>2010</strong>, no Parque Fluminense em Duque de Caxias, pela liderança do professor <strong>Vinícius "Mutante" Almeida</strong>, faixa preta terceiro dan, nossa equipe tem como missão o <em>aprimoramento pessoal</em> e a formação de <em>jovens atletas</em>.</p>
+        <p>Vivemos o jiu-jitsu no dia a dia da comunidade, promovendo padrões de qualidade social e o bem-estar de todos.</p>
+        <p>Incentivamos os sonhos de jovens atletas, unindo a arte marcial ao esporte, fortalecendo o <strong>espírito esportivo</strong> e despertando o <strong>orgulho e a importância da competição saudável</strong>.</p>
+        <p>Junte-se à nossa história. Aqui, cada luta é uma oportunidade para evoluir e conquistar!</p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="assets/icones/13.jpg" alt="Logo da Equipe Mutante Jiu-Jitsu" class="footer-logo">
+            <p class="footer-text">&copy; 2025 Mutante Jiu-Jitsu</p>
+            <!--desenvolvido Por WallaceLuz-->
+        </div>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-button" onclick="scrollToTop()">
+        <img src="assets/icones/10.png" alt="sankaku-jime"> <!-- Ícone do botão - O Sankaku-jime (Sankaku = triangular, Jime = estrangulamento), conhecido popularmente como triângulo, compõe o Katame-waza . É classificado como Shime-waza.-->
+    </div>
+<!--
+     <button type="button" class="button button-solid-secondary fixed right-1 bottom-1 scroll-top-btn text-lg size-10 z-50" title="Back to top">
+            <i class="icon-start far fa-arrow-to-top"></i>
+        </button>-->
+
+    <script src="script.js"></script>
+</body>
+</html>

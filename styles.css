@@ -1,0 +1,265 @@
+/*Header e botões*/
+header {
+    background-image: url('assets/icones/11.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Texto branco para contraste */
+    text-shadow: 7px 9px 6px black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Borda preta ao redor do texto */
+    font-size: 2.5rem; /* Tamanho da fonte do título */
+    text-align: center;
+    padding: 1rem;
+}
+
+button {
+    background-color: transparent; /* Fundo transparente */
+    color: white; /* Texto branco */
+    font-size: 1.2rem; /* Tamanho ajustado */
+    font-weight: bold; /* Destaque no texto */
+    text-decoration: underline; /* Texto sublinhado */
+    border: none; /* Remove borda padrão */
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Borda preta ao redor do texto */
+    cursor: pointer; /* Cursor de interação */
+    transition: opacity 0.3s ease; /* Transição suave ao interagir */
+}
+
+button:hover {
+    opacity: 0.8; /* Leve destaque no hover */
+}
+
+/*Popup do Doodle*/
+#doodle {
+    position: fixed; /* Fixo na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    background-color: transparent; /* Fundo transparente */
+    display: flex;
+    justify-content: right; /* Posicionado à direita */
+    align-items: center; /* Alinhado verticalmente */
+    z-index: 1000; /* Fica acima de outros elementos */
+}
+
+.doodle-popup {
+    background-color: transparent; /* Sem fundo */
+    text-align: center; /* Centraliza o conteúdo */
+    max-width: 300px; /* Tamanho máximo */
+    animation: fade-in 0.5s ease-in-out; /* Aparecimento suave */
+}
+
+.doodle-popup img {
+    width: 50%; /* Tamanho ajustado */
+    height: auto;
+    margin-bottom: 10px; /* Espaço inferior */
+}
+
+.doodle-popup p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    background-color: black; /* Tarja preta de fundo */
+    margin-top: 10px;
+}
+
+/*Corpo e Texto*/
+body {
+    margin: 0; /* Remove margens padrão */
+    font-family: Arial, sans-serif; /* Fonte moderna */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333; /* Cor padrão do texto */
+}
+
+main {
+    text-align: center;
+    padding: 1rem; /* Espaço interno */
+}
+
+h1, p {
+    margin-bottom: 1rem; /* Espaçamento inferior */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem; /* Título menor em telas pequenas */
+    }
+    p {
+        font-size: 1rem; /* Texto reduzido */
+    }
+}
+
+/*Carrossel de Imagens*/
+.carousel {
+    display: flex; /* Alinha imagens horizontalmente */
+    overflow-x: auto; /* Rolagem horizontal ativada */
+    gap: 10px; /* Espaço entre itens */
+    padding: 10px; /* Espaçamento interno */
+    border: 2px solid black; /* Bordas ao redor */
+    border-radius: 10px; /* Bordas arredondadas */
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 150px; /* Largura fixa */
+    height: 100px; /* Altura fixa */
+}
+
+.carousel-item img {
+    width: 100%; /* Ocupe toda a largura */
+    height: 100%; /* Ajuste automático da altura */
+    object-fit: cover; /* Corta ou ajusta a imagem */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Zoom suave no hover */
+}
+
+.carousel-item img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente no hover */
+}
+
+.image-popup {
+    position: fixed; /* Fixa no centro da tela */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+    display: none; /* Inicialmente oculto */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    z-index: 1000; /* Fica acima de todos os elementos */
+}
+
+.image-popup img {
+    max-width: 90%; /* Ocupa até 90% da largura da tela */
+    max-height: 90%; /* Ocupa até 90% da altura da tela */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra ao redor */
+    cursor: pointer; /* Indica interatividade ao passar o mouse */
+}
+
+/* Imagem da Arena Conexão Sport Club (Imagem 12) */
+.contact-section .responsive-image {
+    width: 97%; /* Garante que ocupe toda a largura do contêiner */
+    height: auto; /* Mantém a proporção correta */
+    max-width: 100%; /* Garante que não ultrapasse o tamanho do contêiner */
+    display: block; /* Remove espaços extras como imagem inline */
+    border-radius: 10px; /* Bordas arredondadas, opcional */
+    box-shadow: 7px 9px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    justify-content: center;
+    margin-left: auto; /* Centraliza com margens automáticas */
+    margin-right: auto;
+}
+
+/*Produtos na Loja*/
+.product-grid {
+    display: grid; /* Grelha para organização dos itens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta colunas automaticamente */
+    gap: 1rem; /* Espaço entre os itens */
+    margin: 2rem auto; /* Margem superior/inferior */
+    max-width: 1200px; /* Largura máxima do grid */
+}
+
+.product-item {
+    background-color: white;
+    border: 2px solid black; /* Bordas ao redor */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem; /* Espaço interno */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-item img {
+    width: 100%; /* Imagem totalmente responsiva */
+    height: auto;
+    transition: transform 0.3s ease; /* Expansão suave */
+}
+
+.product-item img:hover {
+    transform: scale(1.5); /* Aumenta 50% ao passar o mouse */
+}
+
+.product-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/*RedesSociais*/
+.instagram-logo {
+    width: 2em; /* Ajusta o tamanho da imagem ao tamanho do texto */
+    height: auto; /* Mantém a proporção correta */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+/*Botão de Rolagem*/
+.scroll-button {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;/*
+    text-align: center;*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+/* Ícone dentro do botão */
+.scroll-button img {
+    width: 130%;
+    height: auto;
+}
+/* Efeito de texto ao passar o mouse */
+.scroll-button::after {
+    content: "Topo"; /* Texto exibido */
+    position: absolute;
+    bottom: 90px; /* Exibe o texto abaixo do botão */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black; /* Fundo do texto */
+    color: white; /* Cor do texto */
+    padding: 5px 10px; /* Espaçamento ao redor do texto */
+    border-radius: 30px; /* Bordas arredondadas */
+    font-size: 0.6rem; /* Tamanho do texto */
+    opacity: 0; /* Inicialmente invisível */
+    pointer-events: none; /* Impede interação com o texto */
+    transition: opacity 0.3s ease; /* Transição suave */
+}
+
+.scroll-button:hover::after {
+    opacity: 1; /* Torna o texto visível ao passar o mouse */
+}
+
+/*Footer*/
+footer {
+    background-color: black; /* Fundo escuro */
+    display: flex; /* Organiza itens horizontalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    padding: 1rem;
+}
+
+.footer-content {
+    display: flex; /* Ativa o layout flex */
+    justify-content: space-between; /* Itens nas extremidades */
+    align-items: center;
+    width: 100%; /* Largura completa do rodapé */
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin-right: auto; /* Empurra o logo para a esquerda */
+}
+
+.footer-text {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}

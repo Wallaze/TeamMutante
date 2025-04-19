@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe Mutante Jiu-Jitsu</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Importa os estilos definidos -->
+</head>
+<body>
+    <header>
+        <h1>Contato</h1>
+        <!-- Botões de navegação para acessar outras páginas -->
+        <button onclick="location.href='index.html'">A Equipe</button>
+        <button onclick="location.href='galeria.html'">Galeria</button>
+        <button id="contactButton" onclick="handleButtonClick('contato.html', 'contactButton')">Contato</button>
+        <button onclick="location.href='loja.html'">Loja</button>
+    </header>
+
+    <!-- Doodle oculto que redireciona para a loja -->
+    <div id="doodle" style="display: none;">
+        <div class="doodle-popup">
+            <!-- Link para a loja -->
+            <a href="loja.html">
+                <img src="assets/icones/02.png" alt="Doodle da Página Inicial" style="width: 200px; cursor: pointer;"> <!-- Imagem do doodle -->
+            </a>
+            <p>Visite nossa loja!</p>
+        </div>
+    </div>
+
+    <main>
+        <!-- Seção 1: Texto atrativo e treinos semanais -->
+        <section class="contact-section">
+            <h1>Venha treinar com a gente!</h1>
+            <p>Confira os horários e participe dos treinos na Arena Conexão Sport Club.</p>
+            <img src="assets/icones/12.jpg" alt="Treinos semanais na Arena Conexão Sport Club" class="responsive-image"> <!-- Imagem dos treinos -->
+        </section>
+
+        <!-- Seção 2: Informações sobre a Arena Conexão -->
+        <section class="contact-section">
+            <h2>Arena Conexão Sport Club</h2>
+            <p>Infantil: Segundas, quartas e quintas, 18 horas</p>
+            <p>Adulto: De segunda à sexta, 19 horas</p>
+            <p><strong>Siga a Arena Conexão no Instagram:</strong>
+                <a href="https://www.instagram.com/arenaconexao.acx/" target="_blank">@arenaconexao.acx</a>
+            </p>
+        </section>
+
+        <!-- Seção 3: Informações sobre a Academia Zen -->
+        <section class="contact-section">
+            <h2>Academia Zen</h2>
+            <p>Terças e Quintas às <strong>8:30 da noite</strong>.</p>
+            <p>Rua Guajará, n1, Parque Fluminense</p>
+        </section>
+
+        <!-- Seção 4: Detalhes de contato -->
+        <section class="contact-section">
+            <h2>Entre em Contato</h2>
+            <p><strong>Professor Vinícius "Mutante" Almeida</strong> - Faixa Preta Terceiro Grau</p>
+            <p>
+                <img src="assets/icones/04.png" alt="Logo do WhatsApp" style="width: 30px; height: auto; vertical-align: middle;">
+                <strong>(21) 99990-9990</strong>
+            </p>
+            <p><a href="mailto:mutantealmeida@gmail.com">mutantealmeida@gmail.com</a></p> <!-- Email para contato -->
+        </section>
+
+        <!-- Seção 5: Link do Instagram -->
+        <section class="contact-section">
+            <h2>Visite o nosso Instagram</h2>
+            <a href="https://www.instagram.com/mutante_jiujitsu/" target="_blank" style="text-decoration: none; color: inherit;">
+                <p>
+                    <img src="assets/icones/03.png" alt="Ícone do Instagram" class="instagram-logo">
+                    <strong>@mutante_jiujitsu</strong>
+                </p>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="assets/icones/13.jpg" alt="Logo da Equipe Mutante Jiu-Jitsu" class="footer-logo">
+            <p class="footer-text">&copy; 2025 Mutante Jiu-Jitsu</p>
+        </div>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-button" onclick="scrollToTop()">
+        <img src="assets/icones/06.png" alt="Chave de braço, Armlock, Ude-Hishigi-Juji-Gatame"> <!-- Talvez seja esta a chave mais característica do Jiu-jitsu. E talvez a mais utilizada. Tudo porque sua eficiência é absoluta. Depois de encaixado um juji-gatame, ninguém escapa. -->
+    </div>
+<!--
+    <button type="button" class="button button-solid-secondary fixed right-1 bottom-1 scroll-top-btn text-lg size-10 z-50" title="Back to top">
+            <i class="icon-start far fa-arrow-to-top"></i>-->
+
+    <script src="script.js"></script>
+</body>
+</html>

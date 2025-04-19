@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe Mutante Jiu-Jitsu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Galeria de Imagens</h1>
+
+        <button onclick="location.href='index.html'">A Equipe</button>
+        <button id="galleryButton" onclick="handleButtonClick('galeria.html', 'galleryButton')">Galeria</button>
+        <button onclick="location.href='contato.html'">Contato</button>
+        <button onclick="location.href='loja.html'">Loja</button>
+    </header>
+
+    <div id="doodle" style="display: none;">
+        <div class="doodle-popup">
+            <img src="assets/icones/00.jpg" alt="Imagem gerda por IA">
+        </div>
+    </div>
+
+    <main>
+        <h1>A Família Mutante BJJ</h1>
+        <p>Venha fazer parte da nossa equipe!</p>
+
+        <!-- Carrossel de imagens da Família Mutante -->
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="assets/familia/01.jpg" alt="Imagem 01 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/02.jpg" alt="Imagem 02 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/03.jpg" alt="Imagem 03 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/04.jpg" alt="Imagem 04 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/05.jpg" alt="Imagem 05 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/06.jpg" alt="Imagem 06 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/07.jpg" alt="Imagem 07 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/08.jpg" alt="Imagem 08 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/09.jpg" alt="Imagem 09 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/10.jpg" alt="Imagem 10 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/11.jpg" alt="Imagem 11 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/12.jpg" alt="Imagem 12 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/13.jpg" alt="Imagem 13 - Família Mutante" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/familia/14.jpg" alt="Imagem 14 - Família Mutante" onclick="expandImage(this)">
+            </div>
+        </div>
+
+        <h1>Treino dos Adultos</h1>
+        <!-- Carrossel de imagens do Treino dos Adultos -->
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="assets/adultos/01.jpg" alt="Imagem 01 - Treino dos Adultos" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/adultos/02.jpg" alt="Imagem 02 - Treino dos Adultos" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/adultos/03.jpg" alt="Imagem 03 - Treino dos Adultos" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/adultos/04.jpg" alt="Imagem 04 - Treino dos Adultos" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/adultos/05.jpg" alt="Imagem 05 - Treino dos Adultos" onclick="expandImage(this)">
+            </div>
+        </div>
+
+        <h1>Treino das Crianças</h1>
+        <!-- Carrossel de imagens do Treino das Crianças -->
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="assets/criancas/01.jpg" alt="Imagem 01 - Treino das Crianças" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/criancas/02.jpg" alt="Imagem 02 - Treino das Crianças" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/criancas/03.jpg" alt="Imagem 03 - Treino das Crianças" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/criancas/04.jpg" alt="Imagem 04 - Treino das Crianças" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/criancas/05.jpg" alt="Imagem 05 - Treino das Crianças" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/criancas/06.jpg" alt="Imagem 06 - Treino das Crianças" onclick="expandImage(this)">
+            </div>
+        </div>
+
+        <h1>Academia Zen</h1>
+        <!-- Carrossel de imagens da Academia Zen -->
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="assets/zen/01.jpg" alt="Imagem 01 - Academia Zen" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/zen/02.jpg" alt="Imagem 02 - Academia Zen" onclick="expandImage(this)">
+            </div>
+        </div>
+
+        <h1>Nossos Campeões</h1>
+        <!-- Container do carrossel -->
+        <div class="carousel">
+            <!-- Cada div representa uma imagem do carrossel -->
+            <div class="carousel-item">
+                <img src="assets/campeoes/01.jpg" alt="Imagem 01 - Nossos Campeões" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+            <img src="assets/campeoes/02.jpg" alt="Imagem 02 - Nossos Campeões" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/campeoes/03.jpg" alt="Imagem 03 - Nossos Campeões" onclick="expandImage(this)">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/campeoes/04.jpg" alt="Imagem 04 - Nossos Campeões" onclick="expandImage(this)">
+            </div>
+        </div>
+    </main>
+
+    <!-- Popup para exibição da imagem expandida -->
+    <div id="expandedImageContainer" class="image-popup" style="display: none;" onclick="closeImage()">
+        <img id="expandedImage" src="" alt="Imagem Expandida"> <!-- Mostra a imagem ao clicar -->
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Logo e direitos autorais -->
+            <img src="assets/icones/13.jpg" alt="Logo da Equipe Mutante Jiu-Jitsu" class="footer-logo">
+            <p class="footer-text">&copy; 2025 Mutante Jiu-Jitsu</p>
+        </div>
+    </footer>
+
+    <!-- Botão para voltar ao topo -->
+    <div id="scrollToTop" class="scroll-button" onclick="scrollToTop()">
+        <img src="assets/icones/08.png" alt="Qual é o nome dessa queda?">  <!-- Arremessa-se o oponente sobre o proprio corpo, com uma perna esticada, o pé no quadril e puxando pelos braços -->
+    </div>
+
+    <!-- Vinculação do script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
