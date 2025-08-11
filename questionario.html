@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de Jiu-Jitsu - Equipe Mutante</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <header>
+        <h1>Questionário do Jiu-Jitsu Brasileiro</h1>
+        <h2>Equipe Mutante Jiu-Jitsu</h2>
+        <button onclick="location.href='index.html'">Voltar para a Página Principal</button>
+    </header>
+
+    <main>
+        <section id="quiz-interativo">
+            <h3>Teste Seus Conhecimentos</h3>
+            <p>Responda as perguntas abaixo para testar seu conhecimento sobre o Jiu-Jitsu, sua história, técnicas e tradições. São 5 perguntas aleatórias em cada rodada!</p>
+            <div class="quiz-container">
+                <div id="quiz-questions">
+                    </div>
+                <div class="quiz-buttons">
+                    <button onclick="checkQuizAnswers()">Verificar Respostas</button>
+                    <button onclick="loadQuiz()">Nova Rodada</button>
+                </div>
+                <div id="quiz-results" class="quiz-result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="assets/icones/13.jpg" alt="Logo da Equipe Mutante Jiu-Jitsu" class="footer-logo">
+            <p class="footer-text">&copy; 2025 Mutante Jiu-Jitsu</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
