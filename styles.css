@@ -263,3 +263,109 @@ footer {
     text-align: center;
     margin: 0;
 }
+
+/* Estilos do questionário - arquivo quiz.css */
+
+/* Container principal do quiz */
+.quiz-container {
+    background-color: white; /* Fundo branco para destacar do background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 2px solid #333; /* Adiciona uma borda escura para o tema */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+/* Títulos do quiz */
+.quiz-container h2,
+.quiz-container h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Estilo das perguntas */
+.quiz-question {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #000;
+}
+
+/* Estilo das opções de resposta */
+.quiz-options label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.quiz-options label:hover {
+    background-color: #e2e6ea;
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Estilos para os botões do quiz */
+.quiz-buttons button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.quiz-buttons button:hover {
+    background-color: #333;
+}
+
+/* Estilos para a área de resultados */
+.quiz-results {
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quiz-results.correct {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #155724;
+}
+
+.quiz-results.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #721c24;
+}
+
+.quiz-results.neutral {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #856404;
+}
+
+/* Estilos de destaque para perguntas corretas/incorretas */
+.correct-answer {
+    border: 2px solid #28a745;
+    background-color: #d4edda;
+}
+
+.incorrect-answer {
+    border: 2px solid #dc3545;
+    background-color: #f8d7da;
+}
