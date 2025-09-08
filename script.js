@@ -76,6 +76,32 @@ expandedContainer.addEventListener("click", (e) => {
     }
 });
 
+let touchStartX = 0;
+let touchEndX = 0;
+
+const expandedContainer = document.getElementById('expandedImageContainer');
+
+expandedContainer.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+expandedContainer.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) > 50) { // só aceita se arrastar mais de 50px
+        if (swipeDistance > 0) {
+            navigateImage(-1); // arrastou para a direita → imagem anterior
+        } else {
+            navigateImage(1);  // arrastou para a esquerda → próxima imagem
+        }
+    }
+}
+
 // Função que rola para o topo da página
 function scrollToTop() {
     window.scrollTo({
