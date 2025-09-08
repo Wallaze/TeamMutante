@@ -13,7 +13,7 @@ function handleButtonClick(targetPage, buttonId) {
     }
 }
 
-//O carrossel como popup expamndido
+//O carrossel como popup expandido
 
 // Estado global do carrossel
 let currentCarouselImages = [];
@@ -24,7 +24,7 @@ const expandedContainer = document.getElementById('expandedImageContainer');
 const expandedImage = document.getElementById('expandedImage');
 
 // Abrir imagem expandida
-function expandImage(img) {
+window.expandImage = function(img) {
     // Pega todas as imagens do carrossel em que a imagem foi clicada
     const carousel = img.closest('.carousel');
     currentCarouselImages = Array.from(carousel.querySelectorAll('img'));
@@ -40,12 +40,12 @@ function expandImage(img) {
 }
 
 // Fechar imagem expandida
-function closeImage() {
+window.closeImage = function() {
     expandedContainer.style.display = 'none';
 }
 
 // Navegar entre imagens do carrossel
-function navigateImage(direction) {
+window.navigateImage = function(direction) {
     if (!currentCarouselImages.length) return; // segurança
 
     currentIndex += direction;
@@ -100,6 +100,7 @@ function handleSwipe() {
         }
     }
 }
+
 // Função que rola para o topo da página
 function scrollToTop() {
     window.scrollTo({
