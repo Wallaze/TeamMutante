@@ -147,8 +147,14 @@
     </main>
 
     <!-- Popup para exibição da imagem expandida -->
-    <div id="expandedImageContainer" class="image-popup" style="display: none;" onclick="closeImage()">
-        <img id="expandedImage" src="" alt="Imagem Expandida"> <!-- Mostra a imagem ao clicar -->
+    <div id="expandedImageContainer" class="image-popup" style="display: none;">
+    <button class="popup-button left" onclick="navigateImage(-1)">
+        <img src="assets/icones/14.png" alt="左 (hidari): representa o lado esquerdo">
+    </button>
+    <img id="expandedImage" src="" alt="Imagem Expandida">
+    <button class="popup-button right" onclick="navigateImage(1)">
+        <img src="assets/icones/15.png" alt="右 (migi): representa o lado direito">
+    </button>
     </div>
 
     <footer>
