@@ -14,32 +14,8 @@ function handleButtonClick(targetPage, buttonId) {
 }
 
 // Função que expande a imagem quando clicada
-let currentCarouselImages = [];
-let currentIndex = 0;
-
-// Função que expande a imagem quando clicada
-function expandImage(img) {
-    const expandedContainer = document.getElementById('expandedImageContainer');
-    const expandedImage = document.getElementById('expandedImage');
-
-    // Pega todas as imagens do carrossel em que a imagem foi clicada
-    const carousel = img.closest('.carousel');
-    currentCarouselImages = Array.from(carousel.querySelectorAll('img'));
-
-    // Descobre o índice da imagem clicada
-    currentIndex = currentCarouselImages.indexOf(img);
-
-    // Define a imagem inicial
-    expandedImage.src = img.src;
-
-    expandedContainer.style.display = 'flex'; // Mostra popup
-}
-
-// Função que fecha o popup da imagem expandida
-function closeImage() {
-    const expandedContainer = document.getElementById('expandedImageContainer');
-    expandedContainer.style.display = 'none';
-}
+// Referência global do container
+const expandedContainer = document.getElementById('expandedImageContainer');
 
 // Navegar entre imagens do carrossel
 function navigateImage(direction) {
@@ -60,7 +36,6 @@ function navigateImage(direction) {
 
 // controle por teclado (Esc, setas esquerda/direita)
 document.addEventListener("keydown", (e) => {
-    const expandedContainer = document.getElementById('expandedImageContainer');
     if (expandedContainer.style.display === 'flex') {
         if (e.key === "Escape") closeImage();
         if (e.key === "ArrowLeft") navigateImage(-1);
@@ -69,17 +44,15 @@ document.addEventListener("keydown", (e) => {
 });
 
 // Fechar popup ao clicar no fundo escuro
-const expandedContainer = document.getElementById('expandedImageContainer');
 expandedContainer.addEventListener("click", (e) => {
     if (e.target === expandedContainer) {
         closeImage();
     }
 });
 
+// Controle por swipe no celular
 let touchStartX = 0;
 let touchEndX = 0;
-
-const expandedContainer = document.getElementById('expandedImageContainer');
 
 expandedContainer.addEventListener("touchstart", (e) => {
     touchStartX = e.changedTouches[0].screenX;
@@ -101,6 +74,7 @@ function handleSwipe() {
         }
     }
 }
+
 
 // Função que rola para o topo da página
 function scrollToTop() {
