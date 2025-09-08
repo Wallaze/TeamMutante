@@ -13,18 +13,16 @@ function handleButtonClick(targetPage, buttonId) {
     }
 }
 
-//O carrossel como popup expandido
+//carrossel
 
-// Estado global do carrossel
 let currentCarouselImages = [];
 let currentIndex = 0;
 
-// Referência única do container do popup
-const expandedContainer = document.getElementById('expandedImageContainer');
-const expandedImage = document.getElementById('expandedImage');
+// Função que expande a imagem quando clicada
+function expandImage(img) {
+    const expandedContainer = document.getElementById('expandedImageContainer');
+    const expandedImage = document.getElementById('expandedImage');
 
-// Abrir imagem expandida
-window.expandImage = function(img) {
     // Pega todas as imagens do carrossel em que a imagem foi clicada
     const carousel = img.closest('.carousel');
     currentCarouselImages = Array.from(carousel.querySelectorAll('img'));
@@ -35,17 +33,17 @@ window.expandImage = function(img) {
     // Define a imagem inicial
     expandedImage.src = img.src;
 
-    // Mostra popup
-    expandedContainer.style.display = 'flex';
+    expandedContainer.style.display = 'flex'; // Mostra popup
 }
 
-// Fechar imagem expandida
-window.closeImage = function() {
+// Função que fecha o popup da imagem expandida
+function closeImage() {
+    const expandedContainer = document.getElementById('expandedImageContainer');
     expandedContainer.style.display = 'none';
 }
 
 // Navegar entre imagens do carrossel
-window.navigateImage = function(direction) {
+function navigateImage(direction) {
     if (!currentCarouselImages.length) return; // segurança
 
     currentIndex += direction;
@@ -57,11 +55,13 @@ window.navigateImage = function(direction) {
         currentIndex = 0;
     }
 
+    const expandedImage = document.getElementById('expandedImage');
     expandedImage.src = currentCarouselImages[currentIndex].src;
 }
 
-// Controles por teclado
+// controle por teclado (Esc, setas esquerda/direita)
 document.addEventListener("keydown", (e) => {
+    const expandedContainer = document.getElementById('expandedImageContainer');
     if (expandedContainer.style.display === 'flex') {
         if (e.key === "Escape") closeImage();
         if (e.key === "ArrowLeft") navigateImage(-1);
@@ -70,6 +70,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 // Fechar popup ao clicar no fundo escuro
+const expandedContainer = document.getElementById('expandedImageContainer');
 expandedContainer.addEventListener("click", (e) => {
     if (e.target === expandedContainer) {
         closeImage();
@@ -86,20 +87,16 @@ expandedContainer.addEventListener("touchstart", (e) => {
 
 expandedContainer.addEventListener("touchend", (e) => {
     touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-});
-
-function handleSwipe() {
     const swipeDistance = touchEndX - touchStartX;
 
-    if (Math.abs(swipeDistance) > 50) { // só aceita se arrastar mais de 50px
+    if (Math.abs(swipeDistance) > 50) { // distância mínima para swipe
         if (swipeDistance > 0) {
             navigateImage(-1); // arrastou para a direita → imagem anterior
         } else {
             navigateImage(1);  // arrastou para a esquerda → próxima imagem
         }
     }
-}
+});
 
 // Função que rola para o topo da página
 function scrollToTop() {
