@@ -13,9 +13,36 @@ function handleButtonClick(targetPage, buttonId) {
     }
 }
 
-// Função que expande a imagem quando clicada
-// Referência global do container
+//O carrossel como popup expamndido
+
+// Estado global do carrossel
+let currentCarouselImages = [];
+let currentIndex = 0;
+
+// Referência única do container do popup
 const expandedContainer = document.getElementById('expandedImageContainer');
+const expandedImage = document.getElementById('expandedImage');
+
+// Abrir imagem expandida
+function expandImage(img) {
+    // Pega todas as imagens do carrossel em que a imagem foi clicada
+    const carousel = img.closest('.carousel');
+    currentCarouselImages = Array.from(carousel.querySelectorAll('img'));
+
+    // Descobre o índice da imagem clicada
+    currentIndex = currentCarouselImages.indexOf(img);
+
+    // Define a imagem inicial
+    expandedImage.src = img.src;
+
+    // Mostra popup
+    expandedContainer.style.display = 'flex';
+}
+
+// Fechar imagem expandida
+function closeImage() {
+    expandedContainer.style.display = 'none';
+}
 
 // Navegar entre imagens do carrossel
 function navigateImage(direction) {
@@ -30,11 +57,10 @@ function navigateImage(direction) {
         currentIndex = 0;
     }
 
-    const expandedImage = document.getElementById('expandedImage');
     expandedImage.src = currentCarouselImages[currentIndex].src;
 }
 
-// controle por teclado (Esc, setas esquerda/direita)
+// Controles por teclado
 document.addEventListener("keydown", (e) => {
     if (expandedContainer.style.display === 'flex') {
         if (e.key === "Escape") closeImage();
@@ -50,7 +76,7 @@ expandedContainer.addEventListener("click", (e) => {
     }
 });
 
-// Controle por swipe no celular
+// Controle por swipe (mobile)
 let touchStartX = 0;
 let touchEndX = 0;
 
@@ -74,8 +100,6 @@ function handleSwipe() {
         }
     }
 }
-
-
 // Função que rola para o topo da página
 function scrollToTop() {
     window.scrollTo({
